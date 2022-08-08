@@ -13,19 +13,25 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'Test'
             }
         }
         stage('Code Quality') {
             steps {
-                echo 'Deploying....'
+                echo 'Code Quality'
             }
         }
         stage ('Deploy to Dev') {
+            steps { 
+                echo 'Dev'
+            }
 
 
         }
         stage ('Deploy to Test') {
+            steps {
+                echo UAT
+            }
 
         }
     }
